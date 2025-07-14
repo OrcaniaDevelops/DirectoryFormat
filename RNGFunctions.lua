@@ -1,8 +1,19 @@
 
+--Scripted by OrcaniaDevelops
+-- Created 7/13/25
+-- Last Updated 7/14/25
+
 local RNGFunctions = {}
 
 
---[[ Example:
+--[[
+
+How this works:
+
+Takes weight values and returns them as should.
+
+
+ Example:
 
     local objects = {
 		workspace.Basic,
@@ -24,6 +35,7 @@ local RNGFunctions = {}
 		
 
 --]]
+
 function RNGFunctions:ChooseRandom(objects: table, rarities: table)
 
     local randomNum = math.random(1,100)
