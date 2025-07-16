@@ -27,7 +27,7 @@ Takes weight values and returns them as should.
 		["Legendary"] = 5
 	}
 	
-	local RNGFunctions = require(location.ScriptName)
+	local RNGFunctions = require(location.ScriptName) - type example game.ReplicatedStorage.Directory.RNGFunctions
 	
 	local newChoice = RNGFunctions:ChooseRandom(objects, rarities)
 	print(newChoice)
