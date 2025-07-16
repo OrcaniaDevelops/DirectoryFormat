@@ -1,25 +1,32 @@
 
--- Scripted by Orcania
+-- Scripted by OrcaniaDevelops
 -- Created 7/14/25
 
---Services--
+--[[
+
+	Used for creating notifications on players screen.
+
+args:
+
+player: selected player for notification (game.Players.LocalPlayer or "OrcaniaDevelops")
+pos: position on the screen ('bottom', 'top', 'bottomright')
+text: text displayed on the notification ("Hello world!)
+duration: amount of time notification is displayed (15)
+color: color of text displayed (Color3.new(1,1,1))
+
+	Example:
+
+local NotificationFunctions = require(location.scriptName)
+
+NotificationFunctions:CreateNewNotification(game.Players.LocalPlayer, "bottom", "Hello World!", 5, Color3.fromRBG(255,0,0))
+
+
+--]]
 
 local TweenService = game:GetService("TweenService")
 local SoundService = game:GetService("SoundService")
 
---Variables--
-
---Tweens--
-
-
-
----MODULE---
-
-
-
 local NotificationFunctions = {}
-
---Functions--
 
 function NotificationFunctions:CreateNewNotification(player: Player, pos: string, text: string, duration: number, color: Color3)
 
@@ -33,8 +40,7 @@ function NotificationFunctions:CreateNewNotification(player: Player, pos: string
 	local playbackSpeed = math.random(0.8, 1.2)
 	NotifSound.PlaybackSpeed = playbackSpeed
 
-    local self = script
-
+	local self = script
 
 	local Notification = self.Template:Clone()
     local TweenIn = TweenInfo.new(Notification, 0.3, Enum.EasingStyle.Sine, Enum.EasingDirection.In)
